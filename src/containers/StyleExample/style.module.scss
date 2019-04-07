@@ -1,0 +1,10 @@
+$primary-color: #b37399;
+$active-color: red;
+
+.titleSCSS {
+  color: $primary-color;
+  &:hover {
+    color: $active-color;
+    text-decoration: underline;
+  }
+}

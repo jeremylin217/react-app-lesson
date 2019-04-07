@@ -1,0 +1,6 @@
+.titleCSSModule {
+  color: blue;
+}
+.titleCSSModule:hover {
+  color: orange;
+}
