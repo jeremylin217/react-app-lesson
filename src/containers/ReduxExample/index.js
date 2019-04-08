@@ -12,6 +12,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   appActions: bindActionCreators(appActions, dispatch),
+  // oneAction: (...args) => dispatch(oneAction(...args))
 })
 
 class ReduxExample extends Component {
