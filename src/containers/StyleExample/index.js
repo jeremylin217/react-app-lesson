@@ -13,34 +13,29 @@ class StyleExample extends Component {
           <h1>Style Example</h1>
           <hr />
           {/* CSS Modules */}
-          <p>
-            <div className={style.titleCSSModule}>CSS Modules</div>
-            <div className={cx('font-weight-bold', style.titleCSSModule)}>
-              CSS Modules + normal class
-            </div>
-          </p>
+          <div className={style.titleCSSModule}>CSS Modules</div>
+          <div className={cx('font-weight-bold', style.titleCSSModule)}>
+            CSS Modules + normal class
+          </div>
+          <hr />
           {/* Sass/SCSS Modules */}
-          <p>
-            <div className={scssStyle.titleSCSS}>Sass/SCSS Modules</div>
-            <div className={cx('font-weight-bold', scssStyle.titleSCSS)}>
-              Sass/SCSS Modules + normal class
-            </div>
-          </p>
+          <div className={scssStyle.titleSCSS}>Sass/SCSS Modules</div>
+          <div className={cx('font-weight-bold', scssStyle.titleSCSS)}>
+            Sass/SCSS Modules + normal class
+          </div>
+          <hr />
           {/* CSS-in-JS */}
-          <p>
-            <div style={{ color: 'red' }}>CSS-in-JS</div>
-          </p>
+          <div style={{ color: 'red' }}>CSS-in-JS</div>
+          <hr />
           {/* styled-components */}
-          <p>
-            <Title>styled-components</Title>
-            <Title size="large">styled-components with props size: large</Title>
-            <Title awesome>styled-components with props awesome</Title>
-            <Title className="font-weight-bold">
-              styled-components + normal class
-            </Title>
-            <Title>styled-components with normal class</Title>
-            <SubTitle>styled-components</SubTitle>
-          </p>
+          <Title>styled-components</Title>
+          <Title size="large">styled-components with props size: large</Title>
+          <Title awesome>styled-components with props awesome</Title>
+          <Title className="font-weight-bold">
+            styled-components + normal class
+          </Title>
+          <Title>styled-components with normal class</Title>
+          <SubTitle>styled-components</SubTitle>
           <hr />
           <Link to="/">Back to Home</Link>
         </div>
