@@ -22,7 +22,7 @@ export const getUser = action$ =>
     ofType(GET_USER_REQUEST),
     map(action => action.payload.id),
     switchMap(id =>
-      ajax.getJSON(`https://jsonplaceholder.typicode.com/users/abc`).pipe(
+      ajax.getJSON(`https://jsonplaceholder.typicode.com/users/${id}`).pipe(
         map(user => getUserReceive({ user })),
         catchError(error => of(getUserFailure(error)))
       )
