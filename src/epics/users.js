@@ -7,7 +7,7 @@ import { getUsersReceive, getUsersFailure } from '@/actions/users'
 import { getUserReceive, getUserFailure } from '@/actions/user'
 const { REACT_APP_API_URL } = process.env
 
-console.log('process.env: ', process.env)
+// console.log('process.env: ', process.env)
 
 export const getUsers = action$ =>
   action$.pipe(

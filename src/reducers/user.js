@@ -3,7 +3,7 @@ import { handleActions } from 'redux-actions'
 const initState = {
   id: null,
   username: '',
-  name: '',
+  name: 'Jeremy',
   email: '',
 }
 

@@ -9,8 +9,22 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <div className="mb-2">
+            <Link className="btn btn-primary mr-1" to="/welcome">
+              Welcome
+            </Link>
+            <Link className="btn btn-secondary mr-1" to="/example/redux">
+              Counter Example
+            </Link>
+            <Link className="btn btn-secondary mr-1" to="/example/style">
+              Styles Example
+            </Link>
+            <Link className="btn btn-secondary mr-1" to="/users">
+              API Call Example
+            </Link>
+          </div>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Edit <code>src/containers/App/index.js</code> and save to reload.
           </p>
           <a
             className="App-link"
@@ -20,21 +34,6 @@ class App extends Component {
           >
             Learn React
           </a>
-          <p>
-            <Link className="btn btn-primary" to="/welcome">
-              Welcome
-            </Link>
-          </p>
-          <p>
-            <Link className="btn btn-secondary" to="/example/redux">
-              Redux Example
-            </Link>
-          </p>
-          <p>
-            <Link className="btn btn-secondary" to="/example/style">
-              Style Example
-            </Link>
-          </p>
         </header>
       </div>
     )

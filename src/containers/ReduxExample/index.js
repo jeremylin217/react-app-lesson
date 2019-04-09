@@ -15,7 +15,7 @@ const mapDispatchToProps = dispatch => ({
   // oneAction: (...args) => dispatch(oneAction(...args))
 })
 
-class ReduxExample extends Component {
+export class ReduxExample extends Component {
   state = {
     color: '#000000',
   }
@@ -61,7 +61,11 @@ class ReduxExample extends Component {
           <h1>Redux Example</h1>
           <hr />
           <Counter count={count} textColor={color} />
-          <button className="btn btn-primary" onClick={appActions.click}>
+          <button
+            id="clickMeButton"
+            className="btn btn-primary"
+            onClick={appActions.click}
+          >
             Click Me
           </button>
           &nbsp;

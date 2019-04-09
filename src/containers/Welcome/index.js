@@ -20,7 +20,7 @@ class Welcome extends Component {
               color="primary"
               className={classes.welcome}
             >
-              Welcome, {user.firstName}!
+              Welcome, {user.name}!
             </Typography>
           </Grid>
           <Grid item xs={12}>

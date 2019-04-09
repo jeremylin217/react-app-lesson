@@ -21,6 +21,9 @@
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
     "env-cmd": "^8.0.2",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.16.0",
     "eslint-config-react-app": "^3.0.8",
     "eslint-loader": "2.1.1",
@@ -57,6 +60,7 @@
     "redux-actions": "^2.6.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.3",
     "redux-observable": "^1.1.0",
     "resolve": "1.10.0",
     "rxjs": "^6.4.0",
@@ -72,9 +76,10 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build:production": "node scripts/build.js",
     "build:staging": "env-cmd .env.staging npm run build",
     "test": "node scripts/test.js",
+    "test:example": "jest src/__tests__/example.test.js",
     "prettier": "prettier --write '**/*.js'",
     "lint": "eslint src/*.js"
   },
@@ -99,6 +104,7 @@
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"

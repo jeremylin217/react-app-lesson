@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions'
 
-const initState = {
+export const initState = {
   count: 0,
 }
 
