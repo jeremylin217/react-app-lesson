@@ -19,7 +19,9 @@ describe('<ReduxExample />', () => {
   beforeEach(() => {
     onClick = jest.fn()
     wrapper = mount(
-      <MemoryRouter>
+      <MemoryRouter
+        initialEntries={[{ pathname: '/example/redux', key: 'test' }]}
+      >
         <ReduxExampleComponent count={0} appActions={{ click: onClick }} />
       </MemoryRouter>
     )
@@ -50,10 +52,16 @@ describe('<ReduxExample /> with redux store', () => {
     const store = mockStore(initialState)
     wrapper = mount(
       <Provider store={store}>
-        <MemoryRouter>
+        <MemoryRouter
+          initialEntries={[{ pathname: '/example/redux', key: 'test' }]}
+        >
           <ReduxExample />
         </MemoryRouter>
       </Provider>
     )
+  })
+
+  it('should render', () => {
+    expect(toJson(wrapper)).toMatchSnapshot()
   })
 })

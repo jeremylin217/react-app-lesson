@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReduxExample /> should render 1`] = `
-<MemoryRouter>
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "test",
+        "pathname": "/example/redux",
+      },
+    ]
+  }
+>
   <Router
     history={
       Object {
@@ -12,10 +21,9 @@ exports[`<ReduxExample /> should render 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "olrytb",
-            "pathname": "/",
+            "key": "test",
+            "pathname": "/example/redux",
             "search": "",
-            "state": undefined,
           },
         ],
         "go": [Function],
@@ -26,10 +34,9 @@ exports[`<ReduxExample /> should render 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "olrytb",
-          "pathname": "/",
+          "key": "test",
+          "pathname": "/example/redux",
           "search": "",
-          "state": undefined,
         },
         "push": [Function],
         "replace": [Function],
@@ -141,4 +148,169 @@ exports[`<ReduxExample /> should render 1`] = `
     </ReduxExample>
   </Router>
 </MemoryRouter>
+`;
+
+exports[`<ReduxExample /> with redux store should render 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        Object {
+          "key": "test",
+          "pathname": "/example/redux",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "test",
+              "pathname": "/example/redux",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "test",
+            "pathname": "/example/redux",
+            "search": "",
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(ReduxExample)>
+        <ReduxExample
+          appActions={
+            Object {
+              "click": [Function],
+            }
+          }
+          count={0}
+        >
+          <div
+            className="Page"
+          >
+            <div
+              className="container text-center"
+            >
+              <h1>
+                Redux Example
+              </h1>
+              <hr />
+              <Counter
+                count={0}
+                textColor="#000000"
+              >
+                <div>
+                  <div>
+                    Clicks
+                  </div>
+                  <styled.div
+                    count={0}
+                    textColor="#000000"
+                  >
+                    <StyledComponent
+                      count={0}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bdVaJa",
+                            "isStatic": false,
+                            "lastClassName": "dZcQLs",
+                            "rules": Array [
+                              "
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: ",
+                              [Function],
+                              "rem;
+  color: ",
+                              [Function],
+                              ";
+",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bdVaJa",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      textColor="#000000"
+                    >
+                      <div
+                        className="sc-bdVaJa dZcQLs"
+                      >
+                        0
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                </div>
+              </Counter>
+              <button
+                className="btn btn-primary"
+                id="clickMeButton"
+                onClick={[Function]}
+              >
+                Click Me
+              </button>
+               
+              <button
+                className="btn btn-secondary"
+                onClick={[Function]}
+              >
+                Change Color
+              </button>
+              <hr />
+              <Link
+                to="/"
+              >
+                <a
+                  href="/"
+                  onClick={[Function]}
+                >
+                  Back to Home
+                </a>
+              </Link>
+            </div>
+          </div>
+        </ReduxExample>
+      </Connect(ReduxExample)>
+    </Router>
+  </MemoryRouter>
+</Provider>
 `;
