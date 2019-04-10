@@ -10,7 +10,11 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <div className="mb-2">
-            <Link className="btn btn-primary mr-1" to="/welcome">
+            <Link
+              id="welcomeButton"
+              className="btn btn-primary mr-1"
+              to="/welcome"
+            >
               Welcome
             </Link>
             <Link className="btn btn-secondary mr-1" to="/example/redux">

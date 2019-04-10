@@ -54,7 +54,8 @@ export class ReduxExample extends Component {
 
   render() {
     const { color } = this.state
-    const { count, appActions } = this.props
+    const { appActions } = this.props
+    const count = 0
     return (
       <div className="Page">
         <div className="container text-center">
@@ -82,6 +83,38 @@ export class ReduxExample extends Component {
     )
   }
 }
+
+// const ReduxExample = ({ count: countInit, appActions }) => {
+//   const [color, setColor] = useState('#000')
+//   const [count, setCount] = useState(countInit)
+
+//   colorChangeHandler () => {
+//     setColor('#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6))
+//   }
+
+//   return (
+//     <div className="Page">
+//       <div className="container text-center">
+//         <h1>Redux Example</h1>
+//         <hr />
+//         <Counter count={count} textColor={color} />
+//         <button
+//           id="clickMeButton"
+//           className="btn btn-primary"
+//           onClick={appActions.click}
+//         >
+//           Click Me
+//         </button>
+//         &nbsp;
+//         <button className="btn btn-secondary" onClick={this.colorChangeHandler}>
+//           Change Color
+//         </button>
+//         <hr />
+//         <Link to="/">Back to Home</Link>
+//       </div>
+//     </div>
+//   )
+// }
 
 ReduxExample.propTypes = {
   count: PropTypes.number.isRequired,
